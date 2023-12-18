@@ -242,6 +242,7 @@ export default class AdaptiveCard extends React.Component {
                             configManager={this.configManager}
                             style={{marginHorizontal: padding}}
                             actions={this.state.cardModel.actions}
+							deviceFontScale={this.props.deviceFontScale}
                         />
                     )}
                 </ScrollView>
@@ -360,10 +361,12 @@ AdaptiveCard.propTypes = {
 	containerStyle: PropTypes.object,
 	contentContainerStyle: PropTypes.object,
 	cardScrollEnabled: PropTypes.bool,
-	keyboardAvoidingViewEnabled: PropTypes.bool
+	keyboardAvoidingViewEnabled: PropTypes.bool,
+	deviceFontScale: PropTypes.number
 };
 
 AdaptiveCard.defaultProps = {
 	cardScrollEnabled: true,
-	keyboardAvoidingViewEnabled: true
+	keyboardAvoidingViewEnabled: true,
+	deviceFontScale: 1
 };
